@@ -1,0 +1,54 @@
+
+
+<div class="page">
+    <div class="field field_v1">
+      <label for="first-name" class="ha-screen-reader">First name</label>
+      <input id="first-name" class="field__input" placeholder="ex. nawfal" [value]="firstname" (input)="firstname=$event.target.value" 
+             [ngStyle]="{'border-color': (firstname) ? '' : 'red' }">
+      <span class="field__label-wrap" aria-hidden="true">
+        <span class="field__label">First name</span>
+      </span>
+    </div>
+    <div class="field field_v2">
+      <label for="last-name" class="ha-screen-reader">Last name</label>
+      <input id="last-name"  class="field__input" placeholder="ex. ajli" [value]="lastname" (input)="lastname=$event.target.value"
+             [ngStyle]="{'border-color': (lastname) ? '' : 'red' }">
+      <span class="field__label-wrap" aria-hidden="true">
+        <span class="field__label">Last name</span>
+      </span>
+    </div>    
+    <div class="field field_v3">
+      <label for="age" class="ha-screen-reader">Age</label>
+      <input id="age" class="field__input" placeholder="ex. 30" [value]="age" (input)="age=$event.target.value" type="number"
+              [ngStyle]="{'border-color': (age>0) ? '' : 'red' }">
+      <span class="field__label-wrap" aria-hidden="true">
+        <span class="field__label">Age</span>
+      </span>
+    </div>
+    <div class="field field_v2">
+        <label for="city-name" class="ha-screen-reader">City</label>
+        <input id="city-name"  class="field__input" placeholder="ex. Bhalil"  [value]="city" (input)="city=$event.target.value"
+               [ngStyle]="{'border-color': (city) ? '' : 'red' }">
+        <span class="field__label-wrap" aria-hidden="true">
+          <span class="field__label">City</span>
+        </span>
+      </div>
+
+    <div class="">        
+        <button  (click)="pushdata()" class="btn-right" [ngStyle]="{'cursor': (!check_inputs()) ? 'not-allowed' : 'pointer' }"><i class="fa fa-plus"></i> Add</button>
+        <button  (click)="cleardata()" class="btn-left-clear" *ngIf="mydata.length>0"><i class="fa fa-trash"></i> Clear ({{mydata.length}} rows)</button>
+        <button  (click)="alaSQLExcelExport()" [ngStyle]="{'cursor': (mydata.length===0) ? 'not-allowed' : 'pointer' }" [disabled]="mydata.length===0" class="btn-left"><i class="fa fa-download"></i> Excel</button>
+    </div>
+  </div>
+
+    
+
+ 
+
+
+
+
+
+
+
+
