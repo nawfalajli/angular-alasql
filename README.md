@@ -13,7 +13,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 form
 ![alt text](https://github.com/nawfalajli/angular-alasql/blob/master/files/form.png?raw=true)
 file
-![alt text](https://github.com/nawfalajli/angular-alasql/blob/master/files/excel.png?raw=true)
+![alt text](https://github.com/nawfalajli/angular-alasql/blob/master/files/excel_file.png?raw=true)
 
 
 ## Code scaffolding
